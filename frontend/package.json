@@ -60,5 +60,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://10.90.22.196:4000"
+  "proxy": "https://qalam-production.up.railway.app"
 }

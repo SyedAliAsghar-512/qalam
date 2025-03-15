@@ -5,7 +5,7 @@ const config: CapacitorConfig = {
   appName: 'Qalam ',
   webDir: 'build',
   server: {
-    url: "http://10.90.22.196:4000",
+    url: "https://qalam-production.up.railway.app",
     cleartext: true
   }
 };
