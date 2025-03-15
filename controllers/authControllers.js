@@ -235,6 +235,7 @@ for (const match of classMatches) {
 
 sendToken(student, 200, res)
     } catch (error) {
+        return next (new ErrorHandler("Username & Password is incorrect",404))
         res.status(500).json({
             error: "Login failed",
             details: error.message,
