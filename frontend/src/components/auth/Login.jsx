@@ -57,11 +57,6 @@ const Login = () => {
         }
         login(loginData)
     }
-
-const isiPhone = /iPhone/i.test(navigator.userAgent);
-if (isiPhone) {
-    document.body.classList.add('iphone');
-}
  
     return (
         <>

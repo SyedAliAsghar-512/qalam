@@ -35,7 +35,15 @@ export const loginUser = catchAsyncErrors(async (req, res, next) => {
 
     try {
         // Launch Puppeteer
-        const browser = await puppeteer.launch({ headless: true, args: ["--no-sandbox", "--disable-setuid-sandbox"] }); // Set to `true` in production
+        const browser = await puppeteer.launch({ headless: true,   args: [
+            '--disable-gpu',
+            '--disable-dev-shm-usage', // Use disk instead of shared memory
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-accelerated-2d-canvas',
+            '--disable-images', // Disable images
+          ],
+         }); // Set to `true` in production
         const page = await browser.newPage();
 
         await page.setUserAgent(
