@@ -1,0 +1,2066 @@
+html,
+body {
+  font-family: "Amazon Ember";
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+
+
+.logoName{
+   color: #c5c6c7;
+   padding: 1px;
+   
+}
+
+
+/* Scroll Bar */
+
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background-color: #0d2448;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(66, 66, 66, 0.2);
+  border: 0px;
+  background-clip: padding-box;
+  border-radius: 5px;
+}
+
+nav {
+  background: #055993;
+  padding: 1rem 1rem;
+  position: fixed;
+}
+
+.navbar {
+  padding: 0.1rem 1rem;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* From Uiverse.io by themrsami */ 
+.search-container {
+  position: relative;
+  width: 200px;
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.search-input {
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-icon svg {
+  fill: #fff;
+}
+
+.search-icon:hover {
+  background-color: #555;
+}
+
+.search-bar:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.search-bar:focus-within {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+.glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 200%;
+  border-radius: 100px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  transition: all 0.5s ease;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: -1;
+}
+
+.search-bar:hover + .glow {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.search-bar:focus-within + .glow {
+  transform: translate(-50%, -50%) scale(1.2);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+}
+
+
+#search_btn {
+  background-color: #febd69;
+}
+
+.input-group {
+  width: 90%;
+  margin-right: 35%;
+}
+
+#search_field {
+  height: 2.5rem;
+  padding: 1rem;
+}
+
+/* General pagination styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  padding: 8px 12px;
+  color: #000; /* Default light mode text color */
+  border: 1px solid #ddd;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.page-link:hover {
+  background-color: #f0f0f0;
+}
+
+.active .page-link {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.dark-mode .page-link {
+  color: #fff;
+  background-color: #333;
+  border-color: #444;
+}
+
+.dark-mode .page-link:hover {
+  background-color: #555;
+}
+
+.dark-mode .active .page-link {
+  background-color: #1d8348;
+}
+
+#homepage {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    width: 5000px;   
+  background-color: #fa9c23;
+  color: white; /* Adjust padding */
+  font-size: 14px;  /* Reduce font size */
+  border-radius: 5px; /* Optional, for rounded corners */
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.toggle-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.bar{
+  margin-top: 5px;
+  margin-right: 100px;
+  width: 100%;
+  height: 4px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 3 columns, equal width */
+  gap: 5px; /* Space between cells */
+}
+
+.cell {
+  padding: 20px;
+  text-align: center;
+}
+
+
+.sidebar {
+  margin-left:-50px;
+  position: absolute;
+  top: 35px;
+  left: 0px;
+  height: 999px;
+  width: auto;
+  background-color: #787676;
+  color: rgb(0, 0, 0);
+  overflow: hidden;
+  transition: width 0.3s;
+  z-index: 100;
+}
+
+.sidebar-container.open .sidebar {
+  width: 200px;
+}
+
+.sidebar-container:not(.open) .sidebar {
+  width: 0;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.sidebar-container:not(.open) .menu {
+  opacity: 0;
+}
+
+.menu li {
+  padding: 10px 20px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu li:hover {
+  background-color: #3d3d3d;
+}
+
+
+#view_btn,
+#new_review_btn {
+  background-color: #084892;
+  color: white;
+  border-radius: 10px;
+
+}
+
+#cart {
+  font-size: 1rem;
+  color: white;
+}
+
+#cart_count {
+  background-color: #febd69;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+  color: black;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Home page */
+#products_heading {
+  margin-top: 1.4rem;
+}
+
+.card {
+  margin-top: 5px;
+  height: 90%;
+  width: 50%;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.card-title a {
+  text-decoration: none;
+  color: #e5a148;
+
+
+}
+
+.card-title a:hover {
+  color: #d08c34;
+}
+
+.card-body {
+  padding-left: 0;
+
+}
+
+.card-text {
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+.card-img-top {
+  width: 150px;
+  height: 150px;
+  
+}
+
+.ratings {
+  font-size: 1.2rem;
+  color: #fdcc0d;
+}
+
+.err {
+  width: 500px;
+  margin-left: 425px;
+}
+.text {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+.text h2 {
+  font-weight: 600;
+  font-size: 30px;
+}
+.text p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+button {
+  background: #009ec5;
+  width: 200px;
+  height: 40px;
+  margin: 20px;
+  border-radius: 20px;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+}
+
+/* Container for the progress bar */
+.progress-bar {
+  width: 100%; /* Adjust to your desired width */
+  height: 10px; /* Adjust to your desired height */
+  background-color: #c4c1c1; /* Background color of the bar */
+  border-radius: 10px; /* Rounded corners (optional) */
+  border-color: #000;
+  overflow: hidden; /* Ensures the fill stays inside the bar */
+  position: relative;
+  margin-bottom: 10%;
+}
+
+.attendance-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  width: 100%;
+}
+
+.attendance-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 8px;
+  width: 100%;
+}
+
+/* The fill section */
+.fill {
+  height: 100%; /* Fills the entire height */
+  background-color: #4caf50; /* Fill color */
+  width: 0%; /* Default to 0%, adjust dynamically with inline styles */
+  transition: width 1s ease-in-out; /* Smooth animation */
+}
+
+
+#no_of_reviews {
+  font-size: 0.9rem;
+  color: rgb(255, 255, 255);
+  text-align: left;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer.css */
+
+.footer {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Styles for light mode */
+.footer-light {
+  background-color: #f8f9fa; /* Light background color */
+}
+
+.text-dark {
+  color: #3d3636; /* Dark text color */
+}
+
+/* Styles for dark mode */
+.footer-dark {
+  background-color: #000000; /* Dark background color */
+}
+
+.text-light {
+  color: #ffffff; /* Light text color */
+}
+
+
+/* DarkModeToggle.css */
+
+.toggle-container {
+  display: flex;
+  justify-content: center; /* Center the toggle */
+  align-items: center; /* Center vertically */
+}
+
+.toggle-checkbox {
+  display: none; /* Hide the default checkbox */
+}
+
+.title {
+  color: #e3e3e3;
+  padding: 10px;
+}
+
+.toggle-label {
+  position: relative;
+  cursor: pointer;
+  width: 60px; /* Width of the toggle */
+  height: 30px; /* Height of the toggle */
+  background-color: #ccc; /* Default background color */
+  border-radius: 30px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.toggle-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.toggle-switch {
+  position: absolute;
+  width: 26px; /* Width of the switch */
+  height: 26px; /* Height of the switch */
+  left: 2px; /* Positioning of the switch */
+  bottom: 2px; /* Positioning of the switch */
+  background-color: white; /* Color of the switch */
+  border-radius: 50%; /* Round switch */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Change background and switch position when checked */
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #4caf50; /* Background color when checked */
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-switch {
+  transform: translateX(30px); /* Move the switch to the right */
+}
+
+/* Dark Mode styles */
+body.dark-mode {
+  transition: background-color 0.5s, color 0.5s;
+  background-color: #000000; /* Dark background color */
+  color: #ffffff; /* Light text color */
+}
+
+
+
+
+
+/* Product Details Page */
+#product_id {
+  color: grey;
+  font-size: 0.8rem;
+}
+
+#product_price {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#cart_btn,
+#review_btn {
+  border-radius: 2rem;
+  background-color: #fa9c23;
+  border: none;
+  padding: 0.5rem 2rem;
+}
+
+#product_seller {
+  color: grey;
+  font-size: 0.9rem;
+}
+
+#stock_status {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-left: 0.3rem;
+}
+
+.redColor {
+  color: red !important
+}
+
+.greenColor {
+  color: green !important
+}
+
+#product_image {
+  margin-top: 9rem;
+}
+
+/* Loader */
+.loader {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+  width: 80px;
+  height: 80px;
+  padding-left: 0;
+}
+.loader:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #ff5050;
+  border-color: #b7b7b7 transparent;
+  animation: lds-dual-ring 5s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Cart */
+
+.cart-item {
+  margin: 1.8rem 0rem;
+  padding: 0rem 0.7rem;
+}
+
+.cart-item a {
+  color: grey;
+}
+
+#delete_cart_item {
+  color: red;
+  background: white;
+  padding: 0.3rem 0.5rem;
+  font-size: 1.1rem;
+  border: none;
+}
+
+#card_item_price {
+  color: #febd69;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+#checkout_btn,
+.review-btn {
+  background-color: #fa9c23;
+  border-color: #fa9c23;
+  margin-top: 2rem;
+  border-radius: 5rem;
+}
+
+#view_order_details {
+  background-color: #fa9c23;
+  border-color: #fa9c23;
+}
+
+#order_summary {
+  border: 1px solid #e3e3e3;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+}
+
+.order-summary-values {
+  float: right;
+  font-weight: bold;
+}
+
+.stockCounter input {
+  border: none;
+  width: 3rem;
+  text-align: center;
+}
+
+.plus,
+.minus {
+  padding: 0.1rem 0.5rem;
+}
+
+.stockCounter input::-webkit-outer-spin-button,
+.stockCounter input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: white;
+}
+
+/* Login & Register */
+
+.name{
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* Container Styling */
+.containeer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  padding: 5px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .containeer {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.course-card {
+  background: #f9f9f9;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0.2, 0.2, 0.2, 0.5);
+}
+
+.course-card h3 {
+  margin-bottom: 5px;
+  color: #ff5c5c;
+}
+
+.course-card p {
+  margin: 3px 0;
+  color: #555;
+}
+
+/* Card Styling */
+.carrd {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0.2, 0.2, 0.2, 0.5);
+  text-align: center;
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+.carrd h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Circular Progress Bar */
+.progress-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  margin-left: 27%;
+}
+
+/* Progress Fill */
+.progress-fill {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(#ff5c5c var(--progress), #ddd var(--progress));
+}
+
+/* Progress Fill */
+.progress-filll {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(#4ad62a var(--progress), #ddd var(--progress));
+}
+
+/* Inner Circle (Text Display) */
+.progress-text {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  background: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.logoimgg {
+  float: left;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+
+  font-weight: 700;
+}
+
+.wrapper form {
+  padding: 2.5rem 3rem;
+}
+
+/* Set the position of the container to relative */
+.login-container {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  margin-left: 100px;
+  /* Ensures the balls stay centered */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation-container {
+  position: relative;
+  width: 30px;
+  height: 50px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin-left: 30%;
+  margin-top: 10%;
+  overflow: visible;
+}
+
+.ball {
+  position: absolute;
+  width: 30px; /* Ball size */
+  height: 30px; /* Ball size */
+  border-radius: 50%;
+  background-color: #c00c0c; /* Ball color */
+  animation: mergeAnimation 2s ease-in-out infinite;
+}
+
+/* Different colors for each ball */
+.ball-1 {
+  background-color: #c00c0c;
+  animation-delay: 0s;
+  left: 0; /* Start from left side */
+}
+
+.ball-2 {
+  background-color: #ca5346; /* Red color */
+  animation-delay: 1s; /* Slight delay to make them start moving at different times */
+  right: 0; /* Start from right side */
+}
+
+/* Keyframe for ball movement */
+@keyframes mergeAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px); /* Move towards the center */
+  }
+  100% {
+    transform: translateX(0); /* Move back to starting position */
+  }
+}
+
+
+.wrapper form .btn,
+.fetch-btn {
+  background-color: #fa9c23;
+  border-color: #fa9c23;
+  color: rgb(222, 219, 219);
+  margin-top: 1rem;
+}
+
+.fetch-btn:hover {
+  background-color: #fa9c23;
+  color: white;
+}
+
+.wrapper form a {
+  font-size: 0.9rem;
+  color: rgb(255, 255, 255);
+}
+
+/* Avatar */
+.avatar {
+  display: inline-block;
+  margin-bottom: 0;
+  height: 3rem;
+  width: 3rem;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.avater {
+  display: inline-block;
+  margin-bottom: 0;
+  height: 150px;
+  width: 150px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin-left: 65px;
+}
+
+.avater img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.btn.focus,
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.dark-mode .btn {
+  color: #100e0e;
+}
+
+/* Header User Profile */
+
+.avatar-nav {
+  margin-right: 0.6rem;
+  height: 2.2rem;
+  width: 2.2rem;
+}
+
+/* Checkout Steps */
+
+.checkout-progress div {
+  box-sizing: border-box;
+}
+
+.checkout-progress {
+  display: block;
+  clear: both;
+  margin: 20px auto;
+  width: auto;
+  font-family: sans-serif;
+  overflow: auto;
+}
+
+.step {
+  margin: 0;
+  border: 0;
+  letter-spacing: 1px;
+  line-height: 30px;
+  padding: 5px 10px 5px 15px;
+  color: grey;
+  text-decoration: none;
+  cursor: default;
+  font-weight: bold;
+  float: left;
+  height: auto;
+}
+
+.incomplete {
+  background: #eeeeee;
+}
+
+.active-step {
+  background: #fa9c23;
+  color: #fff;
+}
+
+.triangle-active {
+  float: left;
+  width: 0;
+  border-top: 20px solid transparent;
+  border-left: 15px solid #fa9c23;
+  border-bottom: 20px solid transparent;
+  margin-left: -1px;
+}
+
+.triangle2-active {
+  width: 0;
+  float: left;
+  border-top: 20px solid #fa9c23;
+  border-left: 15px solid #fff;
+  border-bottom: 20px solid #fa9c23;
+  margin-right: -1px;
+}
+
+.triangle-incomplete {
+  float: left;
+  width: 0;
+  border-top: 20px solid transparent;
+  border-left: 15px solid #eeeeee;
+  border-bottom: 20px solid transparent;
+  margin-left: -1px;
+}
+
+.triangle2-incomplete {
+  width: 0;
+  float: left;
+  border-top: 20px solid #eeeeee;
+  border-left: 15px solid #fff;
+  border-bottom: 20px solid #eeeeee;
+  margin-right: -1px;
+}
+
+/* User Profile */
+
+.avatar-profile {
+  height: 16rem;
+  width: 16rem;
+}
+
+.user-info h4 {
+  font-weight: 800;
+  color: grey;
+  margin-top: 2rem;
+}
+
+.user-info p {
+  font-size: 1.1rem;
+}
+
+#edit_profile {
+  background-color: #fa9c23;
+  border-color: #fa9c23;
+}
+
+/* Confirm Order */
+
+.order-confirm p,
+.order-details p {
+  margin-left: 1.5rem;
+}
+
+.update-btn,
+#create_btn {
+  background-color: #fa9c23;
+  border-color: #fa9c23;
+  color: white;
+}
+
+#drop:hover{
+  background-color: rgb(225, 225, 225);
+}
+
+.update-btn:hover {
+  color: white;
+}
+
+/* Pagination */
+.page-item.active .page-link {
+  background-color: #fa9c23;
+  border-color: #fa9c23;
+}
+
+.page-link {
+  color: #d37903;
+}
+
+.page-link:hover {
+  color: #df850f;
+}
+
+/* Products List Admin */
+#products_table .btn {
+  padding: 0.2rem 0.5rem;
+  margin-left: 0.4rem;
+}
+
+/* Dashboard */
+
+.admin-child-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-font-size {
+  font-size: 1.5rem;
+}
+
+/* Reviews */
+
+.rating {
+  margin-top: 10rem;
+}
+
+.stars {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+}
+
+.star {
+  display: inline;
+  list-style: none;
+  font-size: 3rem;
+  padding-left: 0.9rem;
+  color: #e3e3e3;
+}
+
+.star:first-child {
+  padding-left: 0;
+}
+
+.orange {
+  color: #fa9c23;
+}
+
+.yellow {
+  color: #fdcc0d;
+}
+
+.review_user {
+  font-size: 0.8rem;
+  color: grey;
+}
+
+.cross-button {
+  background-color: #dc3545;
+}
+
+#filter_form .row .col {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#filter_form button {
+  background-color: #fa9c23;
+  border-color: #fa9c23;
+}
+
+.filter {
+  margin-top: 5.8rem;
+}
+
+/* Sidebar */
+
+.list-group-item:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.list-group-item {
+  border: none;
+}
+
+.list-group-item.active {
+  background-color: #f3f4f6;
+  border-color: #f3f4f6;
+  border-radius: 0.3rem;
+  color: #fa9c23;
+}
+
+/* From Uiverse.io by Praashoo7 */ 
+.carrrd {
+  width: 17em;
+  height: 22.5em;
+  background: #171717;
+  transition: 1s ease-in-out;
+  clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.carrrd span {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 1em;
+}
+
+.carrrd .info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  margin: 1em;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 0.5s ease forwards;
+}
+
+.fade-in-right {
+  animation: fadeInRight 0.5s ease forwards;
+}
+
+.fade-in-bottom {
+  animation: fadeInBottom 0.5s ease forwards;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.carrrd .imggg {
+  width: 4.8em;
+  height: 4.8em;
+  background: white;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.carrrd .share {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.carrrd a {
+  color: white;
+  transition: .4s ease-in-out;
+}
+
+.carrrd a:hover {
+  color: red;
+}
+
+.carrrd button {
+  padding: 0.8em 1.7em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: .4s ease-in-out;
+}
+
+.carrrd button:hover {
+  background: red;
+  color: white;
+  cursor: pointer;
+}
+
+/* Container Styling */
+#class-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+@media only screen and (max-width: 1440px) {
+ 
+  .loginn {
+   width: 190px;
+  }
+ 
+  .login_btn {
+   background-color: #084892;
+   color: white;
+   border-radius: 10px;
+   max-width: 150px;
+   min-height: 40px;
+  }
+
+  .center-container {
+   display: flex;
+   justify-content: center; /* Center horizontally */
+ }
+ 
+ 
+  .developer_btn {
+   border: 1px solid black;
+   border-radius: 10px;
+   max-width: 200px;
+   min-height: 40px;
+   background: transparent;
+   color: black;
+  }
+
+  .footer-text{
+    margin-left: 2px;
+    margin-right: 2px;
+    font-size: 15px;
+    color: grey;
+  }
+
+  .name{
+    font-size: 16px;
+  }
+
+  .dropdown{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 90px;
+    margin-right: 50px;
+  }
+
+  .drop-btn, .dropdown-menu, .dropdown-item{
+    max-width: 90px;
+    background: transparent;
+  }
+
+  .username{
+    font-size: 13px;
+  }
+  
+  .headings{
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  .carrd {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0.2, 0.2, 0.2, 0.5);
+    text-align: center;
+    width: 340px;
+    margin-bottom: 15px;
+  }  
+  
+  .writing {
+    font-size: 16px;
+  }
+  
+  .progress-circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 30%;
+  }
+  
+  .progress-fill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#ff5c5c var(--progress), #ddd var(--progress));
+  }
+  
+  .progress-text {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    background: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+   
+  .class-title{
+    font-size: 18px;
+  }
+
+  .class-time{
+    font-size: 16px;
+  }
+
+  .attendance-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .attendance-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f9f9f9;
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  .progress-bar {
+  width: 300px; /* Adjust to your desired width */
+  height: 10px; /* Adjust to your desired height */
+  background-color: #c4c1c1; /* Background color of the bar */
+  border-radius: 10px; /* Rounded corners (optional) */
+  border-color: #000;
+  overflow: hidden; /* Ensures the fill stays inside the bar */
+  position: relative;
+  margin-bottom: 10%;
+  border: 0.1px solid black;
+}
+
+.animation-container {
+  position: relative;
+  width: 30px;
+  height: 50px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin-right: 0%;
+  margin-top: 10%;
+  overflow: visible;
+}
+
+.table-container {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.table {
+  border-collapse: collapse;
+  border: 1px solid #d1d5db;
+}
+
+.table thead tr {
+  background-color: #f3f4f6;
+  text-align: left;
+}
+
+.table th, .table td {
+  border: 1px solid #d1d5db;
+  font-size: 16px;
+}
+
+.table tbody tr:hover {
+  background-color: #f3f4f6;
+}
+
+
+ }
+
+@media only screen and (max-width: 500px) {
+ 
+  .loginn {
+   width: 190px;
+  }
+ 
+  .login_btn {
+   background-color: #084892;
+   color: white;
+   border-radius: 10px;
+   max-width: 150px;
+   min-height: 40px;
+  }
+
+  .center-container {
+   display: flex;
+   justify-content: center; /* Center horizontally */
+ }
+ 
+ 
+  .developer_btn {
+   border: 1px solid black;
+   border-radius: 10px;
+   max-width: 200px;
+   min-height: 40px;
+   background: transparent;
+   color: black;
+  }
+
+  .footer-text{
+    margin-left: 2px;
+    margin-right: 2px;
+    font-size: 15px;
+    color: grey;
+  }
+
+  .name{
+    font-size: 16px;
+  }
+
+  .dropdown{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 90px;
+    margin-right: 50px;
+  }
+
+  .drop-btn, .dropdown-menuu, .dropdown-item{
+    max-width: 90px;
+    background: transparent;
+  }
+
+  .username{
+    font-size: 13px;
+  }
+  
+  .headings{
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  .carrd {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0.2, 0.2, 0.2, 0.5);
+    text-align: center;
+    width: 340px;
+    margin-bottom: 15px;
+  }  
+  
+  .writing {
+    font-size: 16px;
+  }
+  
+  .progress-circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 30%;
+  }
+  
+  .progress-fill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#ff5c5c var(--progress), #ddd var(--progress));
+  }
+  
+  .progress-text {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    background: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+   
+  .class-title{
+    font-size: 18px;
+  }
+
+  .class-time{
+    font-size: 16px;
+  }
+
+  .attendance-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .attendance-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f9f9f9;
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  .progress-bar {
+  width: 300px; /* Adjust to your desired width */
+  height: 10px; /* Adjust to your desired height */
+  background-color: #c4c1c1; /* Background color of the bar */
+  border-radius: 10px; /* Rounded corners (optional) */
+  border-color: #000;
+  overflow: hidden; /* Ensures the fill stays inside the bar */
+  position: relative;
+  margin-bottom: 10%;
+  border: 0.1px solid black;
+}
+
+.animation-container {
+  position: relative;
+  width: 30px;
+  height: 50px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin-right: 0%;
+  margin-top: 10%;
+  overflow: visible;
+}
+
+.table-container {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.table {
+  border-collapse: collapse;
+  border: 1px solid #d1d5db;
+}
+
+.table thead tr {
+  background-color: #f3f4f6;
+  text-align: left;
+}
+
+.table th, .table td {
+  border: 1px solid #d1d5db;
+  font-size: 16px;
+}
+
+.table tbody tr:hover {
+  background-color: #f3f4f6;
+}
+
+body.iphone {
+  margin-top: 20px;
+}
+
+
+ }
+ 
+ @media only screen and (max-width: 400px) {
+ 
+   .loginn {
+    width: 140px;
+   }
+  
+   .login_btn {
+    background-color: #084892;
+    color: white;
+    border-radius: 10px;
+    max-width: 150px;
+    min-height: 40px;
+   }
+
+   .center-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+  }
+  
+  
+   .developer_btn {
+    border: 1px solid black;
+    border-radius: 10px;
+    max-width: 200px;
+    min-height: 40px;
+    background: transparent;
+    color: black;
+   }
+ 
+   .footer-text{
+    margin-left: 2px;
+    margin-right: 2px;
+     font-size: 12px;
+     color: grey;
+   }
+ 
+   .name{
+     font-size: 10px;
+   }
+ 
+   .dropdown{
+     position: relative;
+     display: inline-block;
+     vertical-align: middle;
+     max-width: 90px;
+     margin-right: 20px;
+   }
+ 
+   .drop-btn{
+     max-width: 90px;
+     background: transparent;
+   }
+ 
+   .username{
+     font-size: 10px;
+   }
+   
+   .headings{
+     font-size: 20px;
+     margin-top: 10px;
+   }
+ 
+   .carrd {
+     background: white;
+     padding: 20px;
+     border-radius: 12px;
+     box-shadow: 0 2px 5px rgba(0.2, 0.2, 0.2, 0.5);
+     text-align: center;
+     width: 240px;
+     margin-bottom: 15px;
+   }  
+   
+   .writing {
+     font-size: 13px;
+   }
+   
+   .progress-circle {
+     position: relative;
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+     background: #ddd;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     overflow: hidden;
+     margin-left: 27%;
+   }
+   
+   .progress-fill {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     border-radius: 50%;
+     background: conic-gradient(#ff5c5c var(--progress), #ddd var(--progress));
+   }
+   
+   .progress-text {
+     position: absolute;
+     font-size: 18px;
+     font-weight: bold;
+     color: #333;
+     background: white;
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   }
+    
+   .class-title{
+     font-size: 14px;
+   }
+ 
+   .class-time{
+     font-size: 13px;
+   }
+ 
+   .attendance-container {
+     display: flex;
+     flex-direction: column;
+     gap: 1px;
+     width: 100%;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   }
+   
+   .attendance-row {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     background: #f9f9f9;
+     border-radius: 8px;
+     width: 100%;
+   }
+ 
+   .progress-bar {
+   width: 250px; /* Adjust to your desired width */
+   height: 10px; /* Adjust to your desired height */
+   background-color: #c4c1c1; /* Background color of the bar */
+   border-radius: 10px; /* Rounded corners (optional) */
+   border-color: #000;
+   overflow: hidden; /* Ensures the fill stays inside the bar */
+   position: relative;
+   margin-bottom: 10%;
+   border: 0.1px solid black;
+ }
+ 
+ .animation-container {
+   position: relative;
+   width: 30px;
+   height: 50px;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   align-self: center;
+   margin-left: 13%;
+   margin-top: 10%;
+   overflow: visible;
+ }
+ 
+ .table-container {
+   background-color: #f9fafb;
+   border-radius: 0.5rem;
+   width: 100%;
+ }
+ 
+ .table {
+   border-collapse: collapse;
+   border: 1px solid #d1d5db;
+ }
+ 
+ .table thead tr {
+   background-color: #f3f4f6;
+   text-align: left;
+ }
+ 
+ .table th, .table td {
+   border: 1px solid #d1d5db;
+   font-size: 12px;
+ }
+ 
+ .table tbody tr:hover {
+   background-color: #f3f4f6;
+ }
+
+ body.iphone {
+  margin-top: 50px;
+}
+ 
+ 
+  }
+
+
+@media only screen and (max-width: 300px) {
+
+    .loginn {
+     width: 100px;
+    }
+   
+    .login_btn {
+     background-color: #084892;
+     color: white;
+     border-radius: 10px;
+     max-width: 90px;
+     min-height: 40px;
+    }
+  
+    .center-container {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+    }
+   
+    .developer_btn {
+     border: 1px solid black;
+     border-radius: 10px;
+     max-width: 200px;
+     min-height: 40px;
+     background: transparent;
+     color: black;
+    }
+  
+    .footer-text{
+      margin-left: 2px;
+      margin-right: 2px;
+      font-size: 12px;
+    }
+  
+    .name{
+      font-size: 10px;
+    }
+  
+    .dropdown{
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 90px;
+      margin-right: 10px;
+    }
+  
+    .drop-btn{
+      max-width: 90px;
+      background: transparent;
+    }
+  
+    .username{
+      font-size: 10px;
+    }
+    
+    .headings{
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  
+    .carrd {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0.2, 0.2, 0.2, 0.5);
+      text-align: center;
+      width: 240px;
+      margin-bottom: 15px;
+    }  
+    
+    .writing {
+      font-size: 12px;
+    }
+    
+    .progress-circle {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      margin-left: 27%;
+    }
+    
+    .progress-fill {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: conic-gradient(#ff5c5c var(--progress), #ddd var(--progress));
+    }
+    
+    .progress-text {
+      position: absolute;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      background: white;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+     
+    .class-title{
+      font-size: 14px;
+    }
+  
+    .class-time{
+      font-size: 13px;
+    }
+  
+    .attendance-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      width: 100%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .attendance-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #f9f9f9;
+      border-radius: 8px;
+      width: 100%;
+    }
+  
+    .progress-bar {
+    width: 250px; /* Adjust to your desired width */
+    height: 10px; /* Adjust to your desired height */
+    background-color: #c4c1c1; /* Background color of the bar */
+    border-radius: 10px; /* Rounded corners (optional) */
+    border-color: #000;
+    overflow: hidden; /* Ensures the fill stays inside the bar */
+    position: relative;
+    margin-bottom: 10%;
+    border: 0.1px solid black;
+  }
+  
+  .animation-container {
+    position: relative;
+    width: 30px;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin-left: 0%;
+    margin-top: 10%;
+    overflow: visible;
+  }
+  
+  .table-container {
+    background-color: #f9fafb;
+    border-radius: 0.5rem;
+    width: 100%;
+  }
+  
+  .table {
+    border-collapse: collapse;
+    border: 1px solid #d1d5db;
+  }
+  
+  .table thead tr {
+    background-color: #f3f4f6;
+    text-align: left;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #d1d5db;
+    font-size: 12px;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f3f4f6;
+  }
+  
+  
+   }
