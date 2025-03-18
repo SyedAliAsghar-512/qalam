@@ -42,13 +42,13 @@ nav {
   position: fixed;
 }
 
-.navbar-brand{
-  padding-top: env(safe-area-inset-top, 100px);
-  padding-top: constant(safe-area-inset-top, 100px);
+.navbar row{
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-top: constant(safe-area-inset-top, 0px);
 }
 
 @supports (padding-top: env(safe-area-inset-top)) {
-  navbar-brand {
+  navbar row{
     height: calc(100px + env(safe-area-inset-top, 0px));
   }
 }
