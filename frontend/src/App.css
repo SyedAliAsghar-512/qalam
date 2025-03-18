@@ -43,12 +43,13 @@ nav {
 }
 
 .navbar-brand{
-  padding-top: env(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top, 100px);
+  padding-top: constant(safe-area-inset-top, 100px);
 }
 
 @supports (padding-top: env(safe-area-inset-top)) {
   navbar-brand {
-    height: calc(100px + env(safe-area-inset-top)); /* Increase height dynamically */
+    height: calc(100px + env(safe-area-inset-top, 0px));
   }
 }
 
