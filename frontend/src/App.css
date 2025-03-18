@@ -36,13 +36,20 @@ body {
 }
 
 nav {
+  margin-top: 5%;
   background: #055993;
   padding: 1rem 1rem;
   position: fixed;
 }
 
-.navbar {
-  padding: 0.1rem 1rem;
+.navbar-brand{
+  padding-top: env(safe-area-inset-top);
+}
+
+@supports (padding-top: env(safe-area-inset-top)) {
+  navbar-brand {
+    height: calc(100px + env(safe-area-inset-top)); /* Increase height dynamically */
+  }
 }
 
 .dropdown {
