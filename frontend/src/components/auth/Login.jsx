@@ -62,7 +62,7 @@ const Login = () => {
         <>
         <nav className="navbar row" style={{ backgroundColor: "#055993"}}>
 <div className="col-12 col-md-6">
-        <div className="navbar-brand" style={{paddingTop: "env(safe-area-inset-top)"}}>
+        <div className="navbar-brand" >
         <img className="logoimgg" src="/images/logo.png" width="60px" height="60px" alt="Nust"/>
             <div style={{textAlign: "center"}}>
             <h5 className="name" style={{marginRight: "10%", fontSize: "16px"}}>NUST Student Portal</h5>
