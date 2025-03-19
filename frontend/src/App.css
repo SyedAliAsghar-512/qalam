@@ -6,6 +6,7 @@ body {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
+  margin-top: env(safe-area-inset-top);
 }
 
 
@@ -40,10 +41,6 @@ nav {
   background: #055993;
   padding: 1rem 1rem;
   position: fixed;
-}
-
-.navbar-brand{
-  margin-top: env(safe-area-inset-top);
 }
 
 .dropdown {
