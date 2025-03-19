@@ -43,7 +43,7 @@ nav {
 }
 
 .navbar-brand{
-  margin-top: env(safe-area-inset-top, 50px);
+  margin-top: env(safe-area-inset-top);
 }
 
 .dropdown {

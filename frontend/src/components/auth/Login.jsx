@@ -44,7 +44,7 @@ const Login = () => {
         if(error) {
           toast.error(error?.data?.message, {
             style: {
-              marginTop: "env(safe-area-inset-top, 16px)", // Adjust for safe area
+              marginTop: "env(safe-area-inset-top)", // Adjust for safe area
             },
           });
         } 
