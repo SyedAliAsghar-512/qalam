@@ -42,8 +42,11 @@ const Login = () => {
         }
 
         if(error) {
-            toast.error(error?.data?.message)
-            
+          toast.error(error?.data?.message, {
+            style: {
+              marginTop: "env(safe-area-inset-top, 16px)", // Adjust for safe area
+            },
+          });
         } 
 
     }, [error, isAuthenticated])
