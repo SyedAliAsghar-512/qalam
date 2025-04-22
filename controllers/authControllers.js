@@ -35,7 +35,7 @@ export const loginUser = catchAsyncErrors(async (req, res, next) => {
 
     try {
         // Launch Puppeteer
-        const browser = await puppeteer.launch({ headless: true,   args: [
+        const browser = await puppeteer.launch({ headless: false,   args: [
             '--disable-gpu',
             '--disable-dev-shm-usage', // Use disk instead of shared memory
             '--no-sandbox',
